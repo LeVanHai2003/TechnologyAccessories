@@ -14,7 +14,7 @@
     <!-- header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-4">
         <div class="container">
-            <a class="navbar-brand" href="{{route('home.index')}}"><strong> <img src="{{ asset('/img/img.png') }}" class="img-fluid rounded" style="width: 120px;height: 70px;"></strong> Shop Bán Thiết Bị Điện Tử </a>
+            <a class="navbar-brand " href="{{route('home.index')}}"><strong> <img src="{{ asset('/img/img.png') }}" class="img-fluid rounded" style="width: 120px;height: 70px;"></strong> Shop Bán Thiết Bị Điện Tử </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

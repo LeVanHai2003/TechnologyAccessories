@@ -63,12 +63,12 @@
     
 
 
-<div class="card">
-<div class="card-header">
+<div class="card border-danger">
+<div class="card-header border-danger">
 Danh mục sản phẩm
 </div>
 <div class="card-body">
-    <table class="table table-bordered table-striped">
+    <table class="table table-info table-striped table-hover">
         <thead>
         <tr>
         <th scope="col">Mã sản phẩm</th>
@@ -85,7 +85,7 @@ Danh mục sản phẩm
 <td>
     <a class="btn btn-primary"
     href="{{route('admin.product.edit', ['id'=> $product->getId()])}}">
-    <i class="bi-pencil"></i>
+    <i class="bi-vector-pen"></i>
     </a> 
 </td>
 <td>

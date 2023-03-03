@@ -8,12 +8,13 @@
          rel="stylesheet" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="{{ asset('/css/admin.css') }}" rel="stylesheet" />
+   
 </head>
 
 <body>`
     <div class="row g-0">
 <!-- sidebar -->
-<div class="p-3 col fixed text-dark " style="height: auto;min-height: 1000px; background-color: #5D7B6F ">
+{{-- <div class="p-3 col fixed text-dark " style="height: auto;min-height: 1000px; background-color: #5D7B6F ">
     <a href="{{ route('admin.home.index') }}" class="text-dark text-decoration-none">
         <span class="fs-5">QUẢN TRỊ HỆ THỐNG</span>
     </a>
@@ -28,13 +29,54 @@
                 class="mt-2 btn text-white" style="background-color:#A4C3A2">Quay lại trang chủ</a>
         </li>
     </ul>
-</div>
+</div> --}}
 <!-- sidebar -->
         <div class="col content-grey">
-            <nav class="p-3 shadow text-end">
-                <span class="profile-font">Admin</span>
-                <img class="img-profile rounded-circle" src="{{ asset('/img/undraw_profile.png') }}">
-            </nav>
+            <div class="row">
+                
+                <div class="col">
+                    <nav class="p-3 shadow text-end">
+                
+                        <span class="profile-font">Admin</span>
+                        <img class="img-profile rounded-circle" src="{{ asset('/img/undraw_profile.png') }}">
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{-- <nav><ul class="nav flex-column">
+                    <li><a href="{{ route('admin.home.index') }}" 
+                        class="nav-link text-dark">Trang chủ</a></li>
+                    <li><a href="{{ route('admin.product.index') }}" 
+                        class="nav-link text-dark">Quản lý sản phẩm</a></li>
+                    <li>
+                        <a href="{{ route('home.index') }}" 
+                            class="mt-2 btn text-white" style="background-color:#A4C3A2">Quay lại trang chủ</a>
+                    </li>
+                </ul></nav> --}}
+                <nav class="navbar navbar-expand-lg bg-body-tertiary ps-4 ">
+                    <div class="container-fluid " >
+                        <a href="{{ route('admin.home.index') }}" 
+                            class="nav-link text-dark">Trang chủ</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li><a href="{{ route('admin.home.index') }}"</li> 
+                                <li><a href="{{ route('admin.product.index') }}" 
+                                    class="nav-link text-dark">Quản lý sản phẩm</a></li>
+                                    <li><a href="{{ route('home.index') }}" 
+                                        class="nav-link text-dark">Quay lại trang chủ</a></li>
+                                    
+                        </ul>
+                        
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+            </div>
+            
             <div class="g-0 m-5">
                 @yield('content')
             </div>
